@@ -10,10 +10,10 @@ export function parse(tokens) {
                 type: 'VariableDeclaration',
                 identifier: tokens[index].value,
             };
-            index++; // Lewati identifier
-            index++; // Lewati "="
-            node.init = walk(); // Recursive untuk mendapatkan nilai inisialisasi
-            index++; // Lewati ";"
+            index++;
+            index++;
+            node.init = walk();
+            index++;
             return node;
         }
 
@@ -21,16 +21,16 @@ export function parse(tokens) {
             index++;
             let node = {
                 type: 'IfStatement',
-                test: walk(), // Recursive untuk mendapatkan kondisi
+                test: walk(),
             };
-            index++; // Lewati "{"
-            node.consequent = walk(); // Recursive untuk mendapatkan pernyataan jika benar
-            index++; // Lewati "}"
+            index++;
+            node.consequent = walk();
+            index++;
             if (tokens[index] && tokens[index].type === 'keyword' && tokens[index].value === 'else') {
-                index++; // Lewati "else"
-                index++; // Lewati "{"
-                node.alternate = walk(); // Recursive untuk mendapatkan pernyataan jika salah
-                index++; // Lewati "}"
+                index++;
+                index++; 
+                node.alternate = walk();
+                index++;
             }
             return node;
         }

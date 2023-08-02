@@ -6,16 +6,6 @@ Sunda Lang dibuat menggunakan Javascript, bikin nya juga cuma gabut:)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-### Built With
-
-* [![Node][Node.js]][Node-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
